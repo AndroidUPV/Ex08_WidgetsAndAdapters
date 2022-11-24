@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<!--
+  ~ This layout will be used to display the information for each Spanish community in an ExpandableListView.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="?android:attr/expandableListPreferredItemPaddingLeft">
+
+    <!-- ImageView that displays the flag of the commmunity -->
+    <ImageView
+        android:id="@+id/ivCommunityFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/flag"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/com_valenciana" />
+
+    <!-- TextView that displays the name of the commmunity -->
+    <TextView
+        android:id="@+id/tvCommunityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCommunityFlag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCommunityFlag"
+        app:layout_constraintTop_toTopOf="@+id/ivCommunityFlag"
+        tools:text="Comunidad Valenciana" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

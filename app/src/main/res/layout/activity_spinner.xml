@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.SpinnerActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/spinner_static"
+        android:textSize="20sp" />
+
+    <!-- Spinner that displays static information (entries) -->
+    <Spinner
+        android:id="@+id/spStatic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:entries="@array/provinces" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingTop="20dp"
+        android:text="@string/spinner_dynamic"
+        android:textSize="20sp" />
+
+    <!-- Spinner that displays dynamic information -->
+    <Spinner
+        android:id="@+id/spDynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+    <!-- EditText that contains the String to add to the Spinner -->
+    <EditText
+        android:id="@+id/etProvince"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/province"
+        android:importantForAutofill="no"
+        android:inputType="none" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Button that adds a String to the dynamic Spinner -->
+        <Button
+            android:id="@+id/bAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/add"
+            tools:ignore="ButtonStyle" />
+
+        <!-- Button that removes the selected item from the dynamic Spinner -->
+        <Button
+            android:id="@+id/bDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

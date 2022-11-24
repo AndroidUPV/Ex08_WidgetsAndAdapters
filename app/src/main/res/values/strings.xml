@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<resources>
+    <string name="app_name">Ex08_WidgetsAndAdapters</string>
+    <!-- Strings for Buttons and activities title -->
+    <string name="autocomplete">AutocompleteTextView</string>
+    <string name="spinner">Spinner</string>
+    <string name="listview">ListView (Legacy)</string>
+    <string name="gridview">GridView (Legacy)</string>
+    <string name="expandable">ExpandableListView</string>
+    <string name="recyclerview">RecyclerView (recommended)</string>
+    <string name="listadapter">RecyclerView with ListAdapter</string>
+    <!-- Strings for the AutocompleteTextViewActivity -->
+    <string name="enter_province">Enter the Spanish province where you live</string>
+    <!-- Strings for the SpinnerActivity -->
+    <string name="spinner_static">Static list of Spanish provinces</string>
+    <string name="spinner_dynamic">Dynamic list of provinces</string>
+    <string name="province">Enter the province to be added</string>
+    <string name="add">Add province</string>
+    <string name="delete">Delete selected</string>
+    <!-- Strings for the AdapterViewActivity -->
+    <string name="flag">Flag</string>
+</resources>

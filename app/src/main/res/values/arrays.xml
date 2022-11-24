@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<resources>
+
+    <!-- Names of Spanish provinces -->
+    <string-array name="provinces">
+        <item>A Coruña</item>
+        <item>Albacete</item>
+        <item>Alicante</item>
+        <item>Almería</item>
+        <item>Araba</item>
+        <item>Asturias</item>
+        <item>Ávila</item>
+        <item>Badajoz</item>
+        <item>Barcelona</item>
+        <item>Burgos</item>
+        <item>Cáceres</item>
+        <item>Cádiz</item>
+        <item>Cantabria</item>
+        <item>Castellón</item>
+        <item>Ciudad Real</item>
+        <item>Córdoba</item>
+        <item>Cuenca</item>
+        <item>Girona</item>
+        <item>Gipuzkoa</item>
+        <item>Granada</item>
+        <item>Guadalajara</item>
+        <item>Huelva</item>
+        <item>Huesca</item>
+        <item>Baleares</item>
+        <item>Jaén</item>
+        <item>La Rioja</item>
+        <item>Las Palmas</item>
+        <item>León</item>
+        <item>Lérida</item>
+        <item>Lugo</item>
+        <item>Madrid</item>
+        <item>Málaga</item>
+        <item>Murcia</item>
+        <item>Navarra</item>
+        <item>Orense</item>
+        <item>Palencia</item>
+        <item>Pontevedra</item>
+        <item>Salamanca</item>
+        <item>Segovia</item>
+        <item>Sevilla</item>
+        <item>Soria</item>
+        <item>Tarragona</item>
+        <item>Santa Cruz de Tenerife</item>
+        <item>Teruel</item>
+        <item>Toledo</item>
+        <item>Valencia</item>
+        <item>Valladolid</item>
+        <item>Vizcaya</item>
+        <item>Zamora</item>
+        <item>Zaragoza</item>
+    </string-array>
+
+    <!-- Old car plate codes of Spanish provinces -->
+    <string-array name="plates">
+        <item>C</item>
+        <item>AB</item>
+        <item>A</item>
+        <item>AL</item>
+        <item>VI</item>
+        <item>O</item>
+        <item>AV</item>
+        <item>BA</item>
+        <item>B</item>
+        <item>BU</item>
+        <item>CC</item>
+        <item>CA</item>
+        <item>S</item>
+        <item>CS</item>
+        <item>CR</item>
+        <item>CO</item>
+        <item>CU</item>
+        <item>GI</item>
+        <item>SS</item>
+        <item>GR</item>
+        <item>GU</item>
+        <item>H</item>
+        <item>HU</item>
+        <item>IB</item>
+        <item>J</item>
+        <item>LO</item>
+        <item>GC</item>
+        <item>LE</item>
+        <item>L</item>
+        <item>LU</item>
+        <item>M</item>
+        <item>MA</item>
+        <item>MU</item>
+        <item>NA</item>
+        <item>OU</item>
+        <item>P</item>
+        <item>PO</item>
+        <item>SA</item>
+        <item>SG</item>
+        <item>SE</item>
+        <item>SO</item>
+        <item>T</item>
+        <item>TF</item>
+        <item>TE</item>
+        <item>TO</item>
+        <item>V</item>
+        <item>VA</item>
+        <item>BI</item>
+        <item>ZA</item>
+        <item>Z</item>
+    </string-array>
+
+    <!-- Flags of Spanish provinces -->
+    <array name="flags">
+        <item>@drawable/a_corunya</item>
+        <item>@drawable/albacete</item>
+        <item>@drawable/alicante</item>
+        <item>@drawable/almeria</item>
+        <item>@drawable/alava</item>
+        <item>@drawable/asturias</item>
+        <item>@drawable/avila</item>
+        <item>@drawable/badajoz</item>
+        <item>@drawable/barcelona</item>
+        <item>@drawable/burgos</item>
+        <item>@drawable/caceres</item>
+        <item>@drawable/cadiz</item>
+        <item>@drawable/cantabria</item>
+        <item>@drawable/castellon</item>
+        <item>@drawable/ciudad_real</item>
+        <item>@drawable/cordoba</item>
+        <item>@drawable/cuenca</item>
+        <item>@drawable/girona</item>
+        <item>@drawable/guipuzcoa</item>
+        <item>@drawable/granada</item>
+        <item>@drawable/guadalajara</item>
+        <item>@drawable/huelva</item>
+        <item>@drawable/huesca</item>
+        <item>@drawable/illes_balears</item>
+        <item>@drawable/jaen</item>
+        <item>@drawable/la_rioja</item>
+        <item>@drawable/las_palmas</item>
+        <item>@drawable/leon</item>
+        <item>@drawable/lerida</item>
+        <item>@drawable/lugo</item>
+        <item>@drawable/madrid</item>
+        <item>@drawable/malaga</item>
+        <item>@drawable/murcia</item>
+        <item>@drawable/navarra</item>
+        <item>@drawable/orense</item>
+        <item>@drawable/palencia</item>
+        <item>@drawable/pontevedra</item>
+        <item>@drawable/salamanca</item>
+        <item>@drawable/segovia</item>
+        <item>@drawable/sevilla</item>
+        <item>@drawable/soria</item>
+        <item>@drawable/tarragona</item>
+        <item>@drawable/tenerife</item>
+        <item>@drawable/teruel</item>
+        <item>@drawable/toledo</item>
+        <item>@drawable/valencia</item>
+        <item>@drawable/valladolid</item>
+        <item>@drawable/vizcaya</item>
+        <item>@drawable/zamora</item>
+        <item>@drawable/zaragoza</item>
+    </array>
+
+    <!-- Names of Spanish communities -->
+    <string-array name="communities">
+        <item>Andalucía</item>
+        <item>Aragón</item>
+        <item>Principado de Asturias</item>
+        <item>Islas Baleares</item>
+        <item>Canarias</item>
+        <item>Cantabria</item>
+        <item>Castilla-La Mancha</item>
+        <item>Castilla y León</item>
+        <item>Cataluña</item>
+        <item>Comunidad Valenciana</item>
+        <item>Extremadura</item>
+        <item>Galicia</item>
+        <item>La Rioja</item>
+        <item>Comunidad de Madrid</item>
+        <item>Región de Murcia</item>
+        <item>Comunidad Foral de Navarra</item>
+        <item>País Vasco</item>
+    </string-array>
+
+    <!-- Flags of Spanish commmunities -->
+    <array name="communities_flags">
+        <item>@drawable/andalucia</item>
+        <item>@drawable/aragon</item>
+        <item>@drawable/princ_asturias</item>
+        <item>@drawable/baleares</item>
+        <item>@drawable/canarias</item>
+        <item>@drawable/cantabria_com</item>
+        <item>@drawable/la_mancha</item>
+        <item>@drawable/castilla_leon</item>
+        <item>@drawable/catalunya</item>
+        <item>@drawable/com_valenciana</item>
+        <item>@drawable/extremadura</item>
+        <item>@drawable/galicia</item>
+        <item>@drawable/la_rioja_com</item>
+        <item>@drawable/madrid_com</item>
+        <item>@drawable/region_murcia</item>
+        <item>@drawable/com_navarra</item>
+        <item>@drawable/pais_vasco</item>
+    </array>
+
+</resources>

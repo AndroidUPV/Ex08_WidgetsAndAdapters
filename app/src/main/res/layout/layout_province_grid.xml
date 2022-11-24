@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<!--
+  ~ This layout will be used to display the information for each Spanish province in a GridView.
+  ~ To include a margin around the layout within a GridView use the padding attribute.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- ImageView that will display the name of the province -->
+    <TextView
+        android:id="@+id/tvProvinceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        tools:text="Valencia" />
+
+    <!-- ImageView that will display the flag of the province -->
+    <ImageView
+        android:id="@+id/ivProvinceFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/flag"
+        tools:srcCompat="@drawable/valencia" />
+
+    <!-- TextView that will display the old car plate code of the province -->
+    <TextView
+        android:id="@+id/tvProvincePlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/teal_200"
+        android:textSize="24sp"
+        tools:text="V" />
+
+</LinearLayout>

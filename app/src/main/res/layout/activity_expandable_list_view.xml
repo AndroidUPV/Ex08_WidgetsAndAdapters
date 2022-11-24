@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022
+  ~ David de Andrés and Juan Carlos Ruiz
+  ~ Development of apps for mobile devices
+  ~ Universitat Politècnica de València
+  -->
+
+<!--
+  ~ ExpandableListView that displays the Spanish communities and,
+  ~ when expanded, its constituent provinces
+  -->
+<ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/elvProvinces"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:childDivider="@color/purple_500"
+    android:divider="@color/teal_200"
+    android:dividerHeight="1dp"
+    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+    tools:context=".ui.activities.ExpandableListViewActivity" />
