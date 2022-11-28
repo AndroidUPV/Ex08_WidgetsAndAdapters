@@ -11,6 +11,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     android:orientation="vertical"
     tools:context=".ui.activities.RecyclerViewActivity">
 
@@ -19,7 +20,6 @@
         android:id="@+id/rvProvincesVertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
@@ -29,6 +29,8 @@
         android:id="@+id/divider1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/purple_200" />
 
     <!-- RecyclerView with a Horizontal LinearLayoutManager -->
@@ -36,7 +38,6 @@
         android:id="@+id/rvProvincesHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -45,6 +46,8 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/purple_200" />
 
     <!-- RecyclerView with a 3-columns GridLayoutManager -->
@@ -52,7 +55,6 @@
         android:id="@+id/rvProvincesGrid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
         android:layout_weight="1"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"

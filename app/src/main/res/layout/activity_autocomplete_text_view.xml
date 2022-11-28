@@ -9,6 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     android:orientation="vertical"
     tools:context=".ui.activities.AutocompleteTextViewActivity">
 
@@ -16,6 +17,5 @@
         android:id="@+id/actvProvince"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:hint="@string/enter_province" />
 </LinearLayout>
