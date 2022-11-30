@@ -23,7 +23,7 @@ import upv.dadm.ex08_widgetsandadapters.model.Province
  */
 class ProvinceRecyclerAdapter(
     private val resource: Int,
-    val data: ArrayList<Province>,
+    private val data: ArrayList<Province>,
     private val onClick: (CharSequence) -> Unit,
     private val onLongClick: (Int) -> Unit
 ) : RecyclerView.Adapter<ProvinceRecyclerAdapter.ProvinceViewHolder>() {

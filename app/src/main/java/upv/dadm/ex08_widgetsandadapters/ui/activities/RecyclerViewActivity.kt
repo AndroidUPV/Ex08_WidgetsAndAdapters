@@ -40,16 +40,16 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding.rvProvincesVertical.adapter = ProvinceRecyclerAdapter(
             R.layout.layout_province_list,
             DataSource.getProvincesArray(this@RecyclerViewActivity),
-            { name -> adapterOnClick(name) },
-            { position -> verticalAdapterOnLongClick(position) }
+            ::adapterOnClick,
+            ::verticalAdapterOnLongClick
         )
 
         // Attach adapter for the RecyclerView with Horizontal LinearLayoutManager
         binding.rvProvincesHorizontal.adapter = ProvinceRecyclerAdapter(
             R.layout.layout_province_list,
             DataSource.getProvincesArray(this@RecyclerViewActivity),
-            { name -> adapterOnClick(name) },
-            { position -> horizontalAdapterOnLongClick(position) }
+            ::adapterOnClick,
+            ::horizontalAdapterOnLongClick
         )
         // Attach a SnapHelper to ensure that when the RecyclerView stops scrolling
         // the current item is fully displayed on the screen
@@ -59,8 +59,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding.rvProvincesGrid.adapter = ProvinceRecyclerAdapter(
             R.layout.layout_province_grid,
             DataSource.getProvincesArray(this@RecyclerViewActivity),
-            { name -> adapterOnClick(name) },
-            { position -> gridAdapterOnLongClick(position) }
+            ::adapterOnClick,
+            ::gridAdapterOnLongClick
         )
     }
 

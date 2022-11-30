@@ -42,8 +42,8 @@ class RecyclerViewWithListAdapterActivity : AppCompatActivity() {
 
         // Adapter for the RecyclerView with Vertical LinearLayoutManager
         binding.rvProvincesListAdapter.adapter = ProvinceListAdapter(
-            { name -> adapterOnClick(name) },
-            { position -> adapterOnLongClick(position) }
+            ::adapterOnClick,
+            ::adapterOnLongClick
         )
         // Submit a new list to be displayed (should be a copy/clone of the original data)
         (binding.rvProvincesListAdapter.adapter as ProvinceListAdapter)
