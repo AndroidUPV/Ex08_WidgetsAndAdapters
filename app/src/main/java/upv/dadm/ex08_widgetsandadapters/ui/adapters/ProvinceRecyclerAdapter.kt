@@ -8,12 +8,9 @@
 package upv.dadm.ex08_widgetsandadapters.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import upv.dadm.ex08_widgetsandadapters.R
+import upv.dadm.ex08_widgetsandadapters.databinding.LayoutProvinceListBinding
 import upv.dadm.ex08_widgetsandadapters.model.Province
 
 /**
@@ -22,30 +19,26 @@ import upv.dadm.ex08_widgetsandadapters.model.Province
  * A ViewHolder keeps the references to all the Views for each item displayed.
  */
 class ProvinceRecyclerAdapter(
-    private val resource: Int,
     private val data: ArrayList<Province>,
     private val onClick: (CharSequence) -> Unit,
     private val onLongClick: (Int) -> Unit
 ) : RecyclerView.Adapter<ProvinceRecyclerAdapter.ProvinceViewHolder>() {
 
     /**
-     * Holds a reference to all the elements within the Views
+     * Holds a ViewBinding with reference to all the elements within the Views
      * and sets listeners to react to any click/longClick on the View.
      */
     class ProvinceViewHolder(
-        itemView: View,
+        private val binding: LayoutProvinceListBinding,
         private val onClick: (CharSequence) -> Unit,
         private val onLongClick: (Int) -> Unit
-    ) : RecyclerView.ViewHolder(itemView) {
-        private val tvName = itemView.findViewById<TextView>(R.id.tvProvinceName)
-        private val tvPlate = itemView.findViewById<TextView>(R.id.tvProvincePlate)
-        private val ivFlag = itemView.findViewById<ImageView>(R.id.ivProvinceFlag)
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         init {
             // This listener will be executed when the View is clicked
             // to display a message with the name of the province clicked
             itemView.setOnClickListener {
-                onClick(tvName.text)
+                onClick(binding.tvProvinceName.text)
             }
             // This listener will be executed when the View is long clicked
             // to remove the long clicked province from the array
@@ -59,19 +52,19 @@ class ProvinceRecyclerAdapter(
          * Fills the elements within the View with provided Province object.
          */
         fun bind(province: Province) {
-            tvName.text = province.name
-            tvPlate.text = province.plate
-            ivFlag.setImageResource(province.flag)
+            binding.tvProvinceName.text = province.name
+            binding.tvProvincePlate.text = province.plate
+            binding.ivProvinceFlag.setImageResource(province.flag)
         }
     }
 
     /**
-     * Creates the View from the provided layout resource and attaches it to a ViewHolder
+     * Creates the ViewBinding and attaches it to a ViewHolder
      * to easily access all the elements within the View.
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProvinceViewHolder {
         return ProvinceViewHolder(
-            LayoutInflater.from(parent.context).inflate(resource, parent, false),
+            LayoutProvinceListBinding.inflate(LayoutInflater.from(parent.context), parent, false),
             onClick,
             onLongClick
         )

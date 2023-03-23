@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import upv.dadm.ex08_widgetsandadapters.R
 import upv.dadm.ex08_widgetsandadapters.data.DataSource
 import upv.dadm.ex08_widgetsandadapters.databinding.ActivityRecyclerViewBinding
+import upv.dadm.ex08_widgetsandadapters.ui.adapters.ProvinceGridRecyclerAdapter
 import upv.dadm.ex08_widgetsandadapters.ui.adapters.ProvinceRecyclerAdapter
 
 /**
@@ -38,7 +39,6 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         // Attach adapter for the RecyclerView with Vertical LinearLayoutManager
         binding.rvProvincesVertical.adapter = ProvinceRecyclerAdapter(
-            R.layout.layout_province_list,
             DataSource.getProvincesArray(this@RecyclerViewActivity),
             ::adapterOnClick,
             ::verticalAdapterOnLongClick
@@ -46,7 +46,6 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         // Attach adapter for the RecyclerView with Horizontal LinearLayoutManager
         binding.rvProvincesHorizontal.adapter = ProvinceRecyclerAdapter(
-            R.layout.layout_province_list,
             DataSource.getProvincesArray(this@RecyclerViewActivity),
             ::adapterOnClick,
             ::horizontalAdapterOnLongClick
@@ -56,8 +55,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         LinearSnapHelper().attachToRecyclerView(binding.rvProvincesHorizontal)
 
         // Attach adapter for the RecyclerView with Vertical GridLayoutManager
-        binding.rvProvincesGrid.adapter = ProvinceRecyclerAdapter(
-            R.layout.layout_province_grid,
+        binding.rvProvincesGrid.adapter = ProvinceGridRecyclerAdapter(
             DataSource.getProvincesArray(this@RecyclerViewActivity),
             ::adapterOnClick,
             ::gridAdapterOnLongClick
@@ -89,6 +87,6 @@ class RecyclerViewActivity : AppCompatActivity() {
      * Removes the selected province from the RecyclerView with Vertical GridLayoutManager.
      */
     private fun gridAdapterOnLongClick(position: Int) {
-        (binding.rvProvincesGrid.adapter as ProvinceRecyclerAdapter).removeProvince(position)
+        (binding.rvProvincesGrid.adapter as ProvinceGridRecyclerAdapter).removeProvince(position)
     }
 }

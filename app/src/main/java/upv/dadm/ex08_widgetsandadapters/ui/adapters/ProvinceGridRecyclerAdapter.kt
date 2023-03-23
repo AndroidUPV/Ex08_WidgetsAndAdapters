@@ -9,49 +9,27 @@ package upv.dadm.ex08_widgetsandadapters.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import upv.dadm.ex08_widgetsandadapters.databinding.LayoutProvinceListBinding
+import upv.dadm.ex08_widgetsandadapters.databinding.LayoutProvinceGridBinding
 import upv.dadm.ex08_widgetsandadapters.model.Province
 
 /**
  * Custom adapter to generate the Views required to display the information
  * of Spanish provinces in a RecyclerView.
  * A ViewHolder keeps the references to all the Views for each item displayed.
- * Updates are handled by computing the different between the old and the new arrays.
  */
-class ProvinceListAdapter(
+class ProvinceGridRecyclerAdapter(
+    private val data: ArrayList<Province>,
     private val onClick: (CharSequence) -> Unit,
     private val onLongClick: (Int) -> Unit
-) : ListAdapter<Province, ProvinceListAdapter.ProvinceViewHolder>(ProvinceDiffCallback) {
-
-    /**
-     * Computes the diff between two provinces in the array.
-     */
-    object ProvinceDiffCallback : DiffUtil.ItemCallback<Province>() {
-        /**
-         * Determine whether two provinces are the same.
-         */
-        override fun areItemsTheSame(oldItem: Province, newItem: Province): Boolean {
-            return oldItem == newItem
-        }
-
-        /**
-         * Determine whether two provinces have the same data.
-         */
-        override fun areContentsTheSame(oldItem: Province, newItem: Province): Boolean {
-            return oldItem.name == newItem.name
-        }
-
-    }
+) : RecyclerView.Adapter<ProvinceGridRecyclerAdapter.ProvinceViewHolder>() {
 
     /**
      * Holds a ViewBinding with reference to all the elements within the Views
      * and sets listeners to react to any click/longClick on the View.
      */
     class ProvinceViewHolder(
-        private val binding: LayoutProvinceListBinding,
+        private val binding: LayoutProvinceGridBinding,
         private val onClick: (CharSequence) -> Unit,
         private val onLongClick: (Int) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
@@ -78,16 +56,15 @@ class ProvinceListAdapter(
             binding.tvProvincePlate.text = province.plate
             binding.ivProvinceFlag.setImageResource(province.flag)
         }
-
     }
 
     /**
-     * Creates the required ViewBinding and attaches it to a ViewHolder
+     * Creates the ViewBinding and attaches it to a ViewHolder
      * to easily access all the elements within the View.
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProvinceViewHolder {
         return ProvinceViewHolder(
-            LayoutProvinceListBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+            LayoutProvinceGridBinding.inflate(LayoutInflater.from(parent.context), parent, false),
             onClick,
             onLongClick
         )
@@ -96,7 +73,20 @@ class ProvinceListAdapter(
     /**
      * Fills the elements within the View with the required data from the array.
      */
-    override fun onBindViewHolder(holder: ProvinceViewHolder, position: Int) {
-        holder.bind(getItem(position))
+    override fun onBindViewHolder(holder: ProvinceViewHolder, position: Int) =
+        holder.bind(data[position])
+
+    /**
+     * Returns the number of items in the adapter.
+     */
+    override fun getItemCount(): Int = data.size
+
+    /**
+     * Removes the Province at the given position in the array and notifies observers.
+     */
+    fun removeProvince(position: Int) {
+        data.removeAt(position)
+        notifyItemRemoved(position)
     }
+
 }
