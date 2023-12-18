@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2022
-  ~ David de Andrés and Juan Carlos Ruiz
-  ~ Development of apps for mobile devices
-  ~ Universitat Politècnica de València
+  ~ Copyright (c) 2022-2023 Universitat Politècnica de València
+  ~ Authors: David de Andrés and Juan Carlos Ruiz
+  ~          Fault-Tolerant Systems
+  ~          Instituto ITACA
+  ~          Universitat Politècnica de València
+  ~
+  ~ Distributed under MIT license
+  ~ (See accompanying file LICENSE.txt)
   -->
 
 <!--
@@ -31,7 +35,7 @@
         android:id="@+id/tvProvincePlate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/teal"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivProvinceFlag"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +47,7 @@
         android:id="@+id/tvProvinceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/purple"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivProvinceFlag"
         app:layout_constraintEnd_toStartOf="@+id/tvProvincePlate"

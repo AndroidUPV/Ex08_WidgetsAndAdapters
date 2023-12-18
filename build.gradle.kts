@@ -9,9 +9,8 @@
  * (See accompanying file LICENSE.txt)
  */
 
-package upv.dadm.ex08_widgetsandadapters.model
-
-/**
- * A province object consists of a province name, its flag, and its old car plate code.
- */
-data class Province(val name: String, val flag: Int, val plate: String)
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id("com.android.application") version "8.2.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.10" apply false
+}
