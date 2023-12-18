@@ -9,7 +9,7 @@
   ~ (See accompanying file LICENSE.txt)
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Ex08_WidgetsAndAdapters" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
