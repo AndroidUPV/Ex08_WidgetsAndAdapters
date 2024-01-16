@@ -14,7 +14,6 @@ package upv.dadm.ex08_widgetsandadapters.ui.activities
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import upv.dadm.ex08_widgetsandadapters.R
 import upv.dadm.ex08_widgetsandadapters.data.DataSource
 import upv.dadm.ex08_widgetsandadapters.databinding.ActivityExpandableListViewBinding
 import upv.dadm.ex08_widgetsandadapters.model.Province
@@ -32,9 +31,6 @@ class ExpandableListViewActivity : AppCompatActivity() {
         val binding = ActivityExpandableListViewBinding.inflate(layoutInflater)
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
-
-        // Set the title of the activity
-        setTitle(R.string.expandable)
 
         // Create the adapter that generates the Views from the data array
         // to be displayed in the ExpandableListView

@@ -40,9 +40,6 @@ class SpinnerActivity : AppCompatActivity() {
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
 
-        // Set the title of the Activity
-        setTitle(R.string.spinner)
-
         // Static Spinner: its contents never change
 
         // Listener to be activated when an item is selected in the Spinner

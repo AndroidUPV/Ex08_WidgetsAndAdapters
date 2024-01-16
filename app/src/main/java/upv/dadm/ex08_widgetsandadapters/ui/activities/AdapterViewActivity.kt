@@ -42,25 +42,22 @@ class AdapterViewActivity : AppCompatActivity() {
         // the layout to display each item on the AdapterView,
         // and the reference to the AdapterView (ListView/GridView)
         var activityLayout = R.layout.activity_list_view
-        var title = R.string.listview
         var itemLayout = R.layout.layout_province_list
         var adapterViewId = R.id.lvProvinces
 
         when (intent.getIntExtra(TYPE_OF_ADAPTER, LIST_VIEW)) {
             GRID_VIEW -> {
                 activityLayout = R.layout.activity_grid_view
-                title = R.string.gridview
                 itemLayout = R.layout.layout_province_grid
                 adapterViewId = R.id.gvProvinces
             }
+
             else -> {
                 // Already initialised to LIST_VIEW (by default)
             }
         }
         // Set the activity content to that of the inflated resource layout
         setContentView(activityLayout)
-        // Set the title of the activity
-        setTitle(title)
 
         // Create the adapter that generates the Views from the data array
         // to be displayed in the ListView/GridView

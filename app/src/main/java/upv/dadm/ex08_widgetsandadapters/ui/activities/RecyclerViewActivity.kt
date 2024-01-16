@@ -15,7 +15,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearSnapHelper
-import upv.dadm.ex08_widgetsandadapters.R
 import upv.dadm.ex08_widgetsandadapters.data.DataSource
 import upv.dadm.ex08_widgetsandadapters.databinding.ActivityRecyclerViewBinding
 import upv.dadm.ex08_widgetsandadapters.ui.adapters.ProvinceGridRecyclerAdapter
@@ -37,9 +36,6 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
-
-        // Set the title of the activity
-        setTitle(R.string.recyclerview)
 
         // Attach adapter for the RecyclerView with Vertical LinearLayoutManager
         binding.rvProvincesVertical.adapter = ProvinceRecyclerAdapter(

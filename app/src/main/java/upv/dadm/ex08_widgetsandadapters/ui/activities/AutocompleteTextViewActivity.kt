@@ -29,9 +29,6 @@ class AutocompleteTextViewActivity : AppCompatActivity() {
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
 
-        // Set the title of the Activity
-        setTitle(R.string.autocomplete)
-
         // Associate an Adapter that provides a View (android.R.layout.simple_dropdown_item_1line)
         // for each data object within an array (R.array.provinces) to the AutocompleteTextView
         binding.actvProvince.setAdapter(

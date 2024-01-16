@@ -14,7 +14,6 @@ package upv.dadm.ex08_widgetsandadapters.ui.activities
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import upv.dadm.ex08_widgetsandadapters.R
 import upv.dadm.ex08_widgetsandadapters.data.DataSource
 import upv.dadm.ex08_widgetsandadapters.databinding.ActivityRecyclerViewListAdapterBinding
 import upv.dadm.ex08_widgetsandadapters.model.Province
@@ -37,9 +36,6 @@ class RecyclerViewWithListAdapterActivity : AppCompatActivity() {
         binding = ActivityRecyclerViewListAdapterBinding.inflate(layoutInflater)
         // Set the activity content to the root element of the generated view
         setContentView(binding.root)
-
-        // Set the title of the activity
-        setTitle(R.string.listadapter)
 
         // Get the list of provinces, which is the original data to work with
         provinceList = DataSource.getProvincesArray(this@RecyclerViewWithListAdapterActivity)
