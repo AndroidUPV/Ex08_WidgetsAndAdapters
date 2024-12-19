@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2022-2023 Universitat Politècnica de València
+  ~ Copyright (c) 2022-2024 Universitat Politècnica de València
   ~ Authors: David de Andrés and Juan Carlos Ruiz
   ~          Fault-Tolerant Systems
   ~          Instituto ITACA
@@ -17,8 +17,8 @@
     <string name="listview">ListView (Legacy)</string>
     <string name="gridview">GridView (Legacy)</string>
     <string name="expandable">ExpandableListView</string>
-    <string name="recyclerview">RecyclerView (recommended)</string>
-    <string name="listadapter">RecyclerView with ListAdapter</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="listadapter">RecyclerView with ListAdapter (recommended)</string>
     <!-- Strings for the AutocompleteTextViewActivity -->
     <string name="enter_province">Enter the Spanish province where you live</string>
     <!-- Strings for the SpinnerActivity -->

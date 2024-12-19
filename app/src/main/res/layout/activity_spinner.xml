@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2022-2023 Universitat Politècnica de València
+  ~ Copyright (c) 2022-2024 Universitat Politècnica de València
   ~ Authors: David de Andrés and Juan Carlos Ruiz
   ~          Fault-Tolerant Systems
   ~          Instituto ITACA
@@ -13,7 +13,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     android:orientation="vertical"
     tools:context=".ui.activities.SpinnerActivity">
 
@@ -28,7 +27,7 @@
     <Spinner
         android:id="@+id/spStatic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/spinner_height"
         android:entries="@array/provinces" />
 
     <TextView
@@ -43,13 +42,13 @@
     <Spinner
         android:id="@+id/spDynamic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/spinner_height" />
 
     <!-- EditText that contains the String to add to the Spinner -->
     <EditText
         android:id="@+id/etProvince"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/edittext_height"
         android:hint="@string/province"
         android:importantForAutofill="no"
         android:inputType="none" />
